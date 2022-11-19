@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(90deg, #1f1f1f, #323232);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 43%;
+  background-color: #4e5d73;
+  border-radius: 10px;
+}
