@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="container">
-      <section>
+      <section className="section">
         <Loading isLoading={isLoading} />
         <Advice data={data} />
         <ButtonChangeAdvice getData={getData} />

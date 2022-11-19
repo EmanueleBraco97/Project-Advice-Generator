@@ -40,3 +40,31 @@ p {
 .divider-destkop {
   color: white;
 }
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .consiglio {
+    font-size: 15px;
+  }
+
+  .pattern-destkop {
+    display: none !important;
+  }
+
+  .pattern-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1399px) {
+  .consiglio {
+    font-size: 15px;
+  }
+
+  .pattern-destkop {
+    display: block !important;
+  }
+
+  .pattern-mobile {
+    display: none !important;
+  }
+}
