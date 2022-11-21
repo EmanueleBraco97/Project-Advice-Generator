@@ -27,6 +27,14 @@ function App() {
     getData();
   }, []);
 
+  //Genera consiglio ogni Minuto//
+  useEffect(() => {
+    let interval = setInterval(() => {
+      getData();
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="container">
       <section className="section">
