@@ -55,7 +55,7 @@ p {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1399px) {
+@media (min-width: 769px) and (max-width: 1099px) {
   .consiglio {
     font-size: 15px;
   }
