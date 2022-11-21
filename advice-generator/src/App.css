@@ -32,7 +32,7 @@ section {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1099px) {
+@media (min-width: 769px) and (max-width: 1100px) {
   .section {
     width: 70%;
     height: 37%;

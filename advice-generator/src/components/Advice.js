@@ -36,7 +36,7 @@ const Advice = ({ data }) => {
         <svg
           className="pattern-mobile"
           style={{ display: "none " }}
-          width="290"
+          width="295"
           height="16"
           xmlns="http://www.w3.org/2000/svg"
         >
