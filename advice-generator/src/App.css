@@ -24,6 +24,13 @@ section {
   position: absolute;
 }
 
+@media (min-width: 290px) and (max-width: 360px) {
+  .section {
+    width: 100%;
+    height: 49%;
+  }
+}
+
 @media (min-width: 360px) and (max-width: 768px) {
   .section {
     width: 82%;

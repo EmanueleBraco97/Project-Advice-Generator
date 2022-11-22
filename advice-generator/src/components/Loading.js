@@ -2,7 +2,7 @@ const Loading = ({ isLoading }) => {
   return (
     <>
       {isLoading && (
-        <span style={{ color: "red", fontSize: "22px" }}>
+        <span style={{ color: "red", fontSize: "18px" }}>
           A Moment Please...
         </span>
       )}

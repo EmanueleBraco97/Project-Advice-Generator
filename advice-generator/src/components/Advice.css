@@ -25,7 +25,7 @@
 .consiglio {
   width: 100%;
   margin: auto;
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .id-consiglio {
@@ -39,6 +39,24 @@ p {
 
 .divider-destkop {
   color: white;
+}
+
+@media (min-width: 290px) and (max-width: 360px) {
+  .id-consiglio {
+    font-size: 13px;
+  }
+
+  .consiglio {
+    font-size: 11px;
+  }
+
+  .pattern-destkop {
+    display: none !important;
+  }
+
+  .pattern-mobile {
+    display: block !important;
+  }
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
