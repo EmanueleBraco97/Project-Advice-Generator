@@ -6,9 +6,10 @@ import Loading from "./components/Loading";
 
 function App() {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getData = async () => {
+    setIsLoading(true);
     try {
       const response = await fetch(`https://api.adviceslip.com/advice`);
       if (!response.ok) {
@@ -17,7 +18,7 @@ function App() {
       let actualData = await response.json();
       setData(actualData);
     } catch (error) {
-      setData(null);
+      setData([]);
     } finally {
       setIsLoading(false);
     }

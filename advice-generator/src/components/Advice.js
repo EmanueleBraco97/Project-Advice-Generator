@@ -7,7 +7,7 @@ const Advice = ({ data }) => {
         return (
           <div className="sub-container" key={i}>
             <div className="title-top">
-              <h5>ADVICE</h5>
+              <h1>ADVICE</h1>
               <p className="id-consiglio">#{data[item].id}</p>
             </div>
             <article className="consiglio">
