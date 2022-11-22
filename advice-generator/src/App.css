@@ -18,10 +18,11 @@ section {
   align-items: center;
   justify-content: center;
   width: 36%;
-  height: 50%;
   background: #323a49;
   border-radius: 10px;
   position: absolute;
+  max-width: 600px;
+  min-width: 300px;
 }
 
 @media (min-width: 290px) and (max-width: 360px) {
@@ -50,7 +51,7 @@ section {
 @media (min-width: 1100px) and (max-width: 1440px) {
   .section {
     width: 70%;
-    height: 37%;
+    height: 50%;
     gap: 20px;
   }
 }
