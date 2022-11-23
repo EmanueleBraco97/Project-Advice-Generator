@@ -1,10 +1,20 @@
 import "./ButtonChangeAdvice.css";
 
-const ButtonChangeAdvice = ({ getData, disabled, handleDisabled = false }) => {
+const ButtonChangeAdvice = ({
+  intervalId,
+  setIntervalId,
+  getData,
+  disabled,
+  handleDisabled = false,
+}) => {
   const handleClick = (event) => {
     event.preventDefault();
     handleDisabled();
     getData();
+    clearInterval(intervalId);
+
+    let interval = setInterval(getData, 60000);
+    setIntervalId(interval);
   };
 
   let buttonClass = "enabled";

@@ -8,6 +8,7 @@ function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [disabled, setDisabled] = useState(false);
+  const [intervalId, setIntervalId] = useState();
 
   const getData = async () => {
     setIsLoading(true);
@@ -20,6 +21,7 @@ function App() {
       setData(actualData);
     } catch (error) {
       setData([]);
+      setIsLoading(false);
     } finally {
       setIsLoading(false);
     }
@@ -27,15 +29,17 @@ function App() {
 
   useEffect(() => {
     getData();
+    let interval = setInterval(getData, 60000);
+    setIntervalId(interval);
   }, []);
 
   //Genera consiglio ogni Minuto//
-  useEffect(() => {
-    let interval = setInterval(() => {
-      getData();
-    }, 60000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   let interval = setInterval(() => {
+  //     getData();
+  //   }, intervalId);
+  //   return () => clearInterval(interval);
+  // }, [intervalId]);
 
   const handleDisabled = () => {
     setDisabled(true);
@@ -53,6 +57,8 @@ function App() {
           getData={getData}
           disabled={disabled}
           handleDisabled={handleDisabled}
+          intervalId={intervalId}
+          setIntervalId={setIntervalId}
         />
       </section>
     </div>
