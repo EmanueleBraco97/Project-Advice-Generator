@@ -7,6 +7,7 @@ import Loading from "./components/Loading";
 function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const getData = async () => {
     setIsLoading(true);
@@ -36,12 +37,23 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleDisabled = () => {
+    setDisabled(true);
+    setTimeout(() => {
+      setDisabled(false);
+    }, 2000);
+  };
+
   return (
     <div className="container">
       <section className="section">
         <Loading isLoading={isLoading} />
         <Advice data={data} />
-        <ButtonChangeAdvice getData={getData} />
+        <ButtonChangeAdvice
+          getData={getData}
+          disabled={disabled}
+          handleDisabled={handleDisabled}
+        />
       </section>
     </div>
   );
